@@ -7,8 +7,12 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-TARGET = multiple-methods-qt-thread-example
+CONFIG(PC, PC | YELLOWFIN){
+    TARGET = multiple-methods-qt-thread-example
+}
+CONFIG(YELLOWFIN, PC | YELLOWFIN){
+    TARGET = qt-multithread-example
+}
 TEMPLATE = app
 
 
