@@ -7,14 +7,10 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-CONFIG(PC, PC | YELLOWFIN){
-    TARGET = multiple-methods-qt-thread-example
-}
-CONFIG(YELLOWFIN, PC | YELLOWFIN){
-    TARGET = qt-multithread-example
-}
-TEMPLATE = app
 
+TARGET = multiple-methods-qt-thread-example
+
+TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -24,3 +20,6 @@ HEADERS  += mainwindow.h \
     worker.h
 
 FORMS    += mainwindow.ui
+
+target.path=/usr/bin
+INSTALLS += target
