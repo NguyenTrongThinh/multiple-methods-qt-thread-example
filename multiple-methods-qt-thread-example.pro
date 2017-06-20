@@ -23,3 +23,7 @@ FORMS    += mainwindow.ui
 
 target.path=/usr/bin
 INSTALLS += target
+
+CONFIG(PRINT, PRINT | NOPRINT) {
+    DEFINES += PRINTF
+}
