@@ -40,6 +40,9 @@ MainWindow::MainWindow(QWidget *parent) :
     thread->start();
 
     connect(worker, SIGNAL(valueChanged(QString)), ui->label, SLOT(setText(QString)));
+#ifdef PRINTF
+    qDebug() << "This is Debug print by config";
+#endif
 }
 
 MainWindow::~MainWindow()
